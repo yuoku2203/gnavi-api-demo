@@ -1,0 +1,857 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8246CCE0040BE9ED8715515B /* Pods_gnavi_api_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2167F4A6D0B6C61EB42715 /* Pods_gnavi_api_demoTests.framework */; };
+		A07DB2AD92F5E7DB3B3A9F12 /* Pods_gnavi_api_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7830D7C61F1F4BD442834A8 /* Pods_gnavi_api_demo.framework */; };
+		B62068231E7FD36F008F197B /* RestSearchParamsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62068221E7FD36F008F197B /* RestSearchParamsBuilder.swift */; };
+		B62068251E7FDAFE008F197B /* RestSearchLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62068241E7FDAFE008F197B /* RestSearchLoadable.swift */; };
+		B62068271E7FEE59008F197B /* RestSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62068261E7FEE59008F197B /* RestSearchResults.swift */; };
+		B62068291E801351008F197B /* RestSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62068281E801351008F197B /* RestSearchAPI.swift */; };
+		B620682C1E8027FD008F197B /* RestaulantListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B620682B1E8027FD008F197B /* RestaulantListTableView.swift */; };
+		B620682E1E802954008F197B /* RestaulantListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B620682D1E802954008F197B /* RestaulantListTableViewCell.swift */; };
+		B6808F571E7F9C0200E0B5A9 /* AreaSelectTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6808F561E7F9C0200E0B5A9 /* AreaSelectTableView.swift */; };
+		B6808F591E7F9DB100E0B5A9 /* AreaSelectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6808F581E7F9DB100E0B5A9 /* AreaSelectTableViewCell.swift */; };
+		B6808F5C1E7FB35A00E0B5A9 /* RestaulantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6808F5B1E7FB35A00E0B5A9 /* RestaulantListViewController.swift */; };
+		B6808F5E1E7FB37400E0B5A9 /* RestaulantListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6808F5D1E7FB37400E0B5A9 /* RestaulantListViewController.storyboard */; };
+		B6A54DA31E7CED7A001BD8AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A54DA21E7CED7A001BD8AC /* AppDelegate.swift */; };
+		B6A54DAA1E7CED7A001BD8AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6A54DA91E7CED7A001BD8AC /* Assets.xcassets */; };
+		B6A54DAD1E7CED7A001BD8AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A54DAB1E7CED7A001BD8AC /* LaunchScreen.storyboard */; };
+		B6A54DCD1E7D7B3E001BD8AC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A54DCC1E7D7B3E001BD8AC /* APIClient.swift */; };
+		B6A54DCF1E7D7CB7001BD8AC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A54DCE1E7D7CB7001BD8AC /* Router.swift */; };
+		B6A54DD31E7D803F001BD8AC /* GNaviBaseParamsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A54DD21E7D803F001BD8AC /* GNaviBaseParamsBuilder.swift */; };
+		B6A54DD71E7D80FE001BD8AC /* GAreaLargeSearchParamsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A54DD61E7D80FE001BD8AC /* GAreaLargeSearchParamsBuilder.swift */; };
+		B6A54DD91E7D82E7001BD8AC /* GAreaLargeSearchLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A54DD81E7D82E7001BD8AC /* GAreaLargeSearchLoadable.swift */; };
+		B6A54DDB1E7D834A001BD8AC /* GAreaLargeSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A54DDA1E7D834A001BD8AC /* GAreaLargeSearchResults.swift */; };
+		B6A54DDF1E7D8606001BD8AC /* GAreaLargeSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A54DDE1E7D8606001BD8AC /* GAreaLargeSearchAPI.swift */; };
+		B6A54DE91E7DB101001BD8AC /* GNaviBaseParamsBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A54DE81E7DB101001BD8AC /* GNaviBaseParamsBuilderTests.swift */; };
+		B6A54DED1E7E2D68001BD8AC /* GAreaLargeSearchParamsBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A54DEC1E7E2D68001BD8AC /* GAreaLargeSearchParamsBuilderTests.swift */; };
+		B6A54DF21E7F9747001BD8AC /* AreaSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A54DF11E7F9747001BD8AC /* AreaSelectViewController.swift */; };
+		B6A54DF41E7F9755001BD8AC /* AreaSelectViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A54DF31E7F9755001BD8AC /* AreaSelectViewController.storyboard */; };
+		B6D834111E8047CE001DEBC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6D834101E8047CE001DEBC3 /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B6A54DB41E7CED7A001BD8AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6A54D971E7CED79001BD8AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6A54D9E1E7CED79001BD8AC;
+			remoteInfo = "gnavi-api-demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E1FC6C1AFF5F0D35F224165 /* Pods-gnavi-api-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gnavi-api-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-gnavi-api-demo/Pods-gnavi-api-demo.release.xcconfig"; sourceTree = "<group>"; };
+		2A2167F4A6D0B6C61EB42715 /* Pods_gnavi_api_demoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gnavi_api_demoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ABF887CF58E406AB6DF72C3 /* Pods-gnavi-api-demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gnavi-api-demoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gnavi-api-demoTests/Pods-gnavi-api-demoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8AD178EC25BD16BA695464C5 /* Pods-gnavi-api-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gnavi-api-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gnavi-api-demo/Pods-gnavi-api-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		ACB109157B01FDABEFEB361D /* Pods-gnavi-api-demoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gnavi-api-demoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-gnavi-api-demoTests/Pods-gnavi-api-demoTests.release.xcconfig"; sourceTree = "<group>"; };
+		B62068221E7FD36F008F197B /* RestSearchParamsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestSearchParamsBuilder.swift; sourceTree = "<group>"; };
+		B62068241E7FDAFE008F197B /* RestSearchLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestSearchLoadable.swift; sourceTree = "<group>"; };
+		B62068261E7FEE59008F197B /* RestSearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestSearchResults.swift; sourceTree = "<group>"; };
+		B62068281E801351008F197B /* RestSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestSearchAPI.swift; sourceTree = "<group>"; };
+		B620682B1E8027FD008F197B /* RestaulantListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaulantListTableView.swift; sourceTree = "<group>"; };
+		B620682D1E802954008F197B /* RestaulantListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaulantListTableViewCell.swift; sourceTree = "<group>"; };
+		B6808F561E7F9C0200E0B5A9 /* AreaSelectTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaSelectTableView.swift; sourceTree = "<group>"; };
+		B6808F581E7F9DB100E0B5A9 /* AreaSelectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaSelectTableViewCell.swift; sourceTree = "<group>"; };
+		B6808F5B1E7FB35A00E0B5A9 /* RestaulantListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaulantListViewController.swift; sourceTree = "<group>"; };
+		B6808F5D1E7FB37400E0B5A9 /* RestaulantListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RestaulantListViewController.storyboard; sourceTree = "<group>"; };
+		B6A54D9F1E7CED7A001BD8AC /* gnavi-api-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gnavi-api-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6A54DA21E7CED7A001BD8AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B6A54DA91E7CED7A001BD8AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B6A54DAC1E7CED7A001BD8AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B6A54DAE1E7CED7A001BD8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6A54DB31E7CED7A001BD8AC /* gnavi-api-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gnavi-api-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6A54DB91E7CED7A001BD8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6A54DCC1E7D7B3E001BD8AC /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B6A54DCE1E7D7CB7001BD8AC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B6A54DD21E7D803F001BD8AC /* GNaviBaseParamsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GNaviBaseParamsBuilder.swift; sourceTree = "<group>"; };
+		B6A54DD61E7D80FE001BD8AC /* GAreaLargeSearchParamsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GAreaLargeSearchParamsBuilder.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B6A54DD81E7D82E7001BD8AC /* GAreaLargeSearchLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GAreaLargeSearchLoadable.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B6A54DDA1E7D834A001BD8AC /* GAreaLargeSearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GAreaLargeSearchResults.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B6A54DDE1E7D8606001BD8AC /* GAreaLargeSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GAreaLargeSearchAPI.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B6A54DE81E7DB101001BD8AC /* GNaviBaseParamsBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GNaviBaseParamsBuilderTests.swift; sourceTree = "<group>"; };
+		B6A54DEC1E7E2D68001BD8AC /* GAreaLargeSearchParamsBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GAreaLargeSearchParamsBuilderTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B6A54DF11E7F9747001BD8AC /* AreaSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaSelectViewController.swift; sourceTree = "<group>"; };
+		B6A54DF31E7F9755001BD8AC /* AreaSelectViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AreaSelectViewController.storyboard; sourceTree = "<group>"; };
+		B6D834101E8047CE001DEBC3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D7830D7C61F1F4BD442834A8 /* Pods_gnavi_api_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gnavi_api_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B6A54D9C1E7CED79001BD8AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A07DB2AD92F5E7DB3B3A9F12 /* Pods_gnavi_api_demo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6A54DB01E7CED7A001BD8AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8246CCE0040BE9ED8715515B /* Pods_gnavi_api_demoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1EAC4A2426208718314A5D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AD178EC25BD16BA695464C5 /* Pods-gnavi-api-demo.debug.xcconfig */,
+				0E1FC6C1AFF5F0D35F224165 /* Pods-gnavi-api-demo.release.xcconfig */,
+				6ABF887CF58E406AB6DF72C3 /* Pods-gnavi-api-demoTests.debug.xcconfig */,
+				ACB109157B01FDABEFEB361D /* Pods-gnavi-api-demoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B620682A1E8027D9008F197B /* RestaulantList */ = {
+			isa = PBXGroup;
+			children = (
+				B620682B1E8027FD008F197B /* RestaulantListTableView.swift */,
+				B620682D1E802954008F197B /* RestaulantListTableViewCell.swift */,
+			);
+			path = RestaulantList;
+			sourceTree = "<group>";
+		};
+		B6808F551E7F9BA700E0B5A9 /* AreaSelect */ = {
+			isa = PBXGroup;
+			children = (
+				B6808F561E7F9C0200E0B5A9 /* AreaSelectTableView.swift */,
+				B6808F581E7F9DB100E0B5A9 /* AreaSelectTableViewCell.swift */,
+			);
+			path = AreaSelect;
+			sourceTree = "<group>";
+		};
+		B6808F5A1E7FB32700E0B5A9 /* RestaulantList */ = {
+			isa = PBXGroup;
+			children = (
+				B6808F5D1E7FB37400E0B5A9 /* RestaulantListViewController.storyboard */,
+				B6808F5B1E7FB35A00E0B5A9 /* RestaulantListViewController.swift */,
+			);
+			path = RestaulantList;
+			sourceTree = "<group>";
+		};
+		B6A54D961E7CED79001BD8AC = {
+			isa = PBXGroup;
+			children = (
+				C5E1A9698B8903E721CC7F9F /* Frameworks */,
+				B1EAC4A2426208718314A5D4 /* Pods */,
+				B6A54DA01E7CED7A001BD8AC /* Products */,
+				B6A54DA11E7CED7A001BD8AC /* gnavi-api-demo */,
+				B6A54DB61E7CED7A001BD8AC /* gnavi-api-demoTests */,
+			);
+			sourceTree = "<group>";
+		};
+		B6A54DA01E7CED7A001BD8AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54D9F1E7CED7A001BD8AC /* gnavi-api-demo.app */,
+				B6A54DB31E7CED7A001BD8AC /* gnavi-api-demoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B6A54DA11E7CED7A001BD8AC /* gnavi-api-demo */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DC41E7D761F001BD8AC /* Controllers */,
+				B6A54DC21E7D7612001BD8AC /* Models */,
+				B6A54DC61E7D7630001BD8AC /* Others */,
+				B6A54DC51E7D7626001BD8AC /* Utils */,
+				B6A54DC31E7D7617001BD8AC /* Views */,
+			);
+			path = "gnavi-api-demo";
+			sourceTree = "<group>";
+		};
+		B6A54DB61E7CED7A001BD8AC /* gnavi-api-demoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DE11E7DB09A001BD8AC /* Controllers */,
+				B6A54DE31E7DB0A6001BD8AC /* Models */,
+				B6A54DE01E7DB08F001BD8AC /* Utils */,
+				B6A54DE21E7DB0A0001BD8AC /* Views */,
+				B6A54DB91E7CED7A001BD8AC /* Info.plist */,
+			);
+			path = "gnavi-api-demoTests";
+			sourceTree = "<group>";
+		};
+		B6A54DC21E7D7612001BD8AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DD01E7D8013001BD8AC /* GNavi */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B6A54DC31E7D7617001BD8AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6808F551E7F9BA700E0B5A9 /* AreaSelect */,
+				B620682A1E8027D9008F197B /* RestaulantList */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B6A54DC41E7D761F001BD8AC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DF01E7F9706001BD8AC /* AreaSelect */,
+				B6808F5A1E7FB32700E0B5A9 /* RestaulantList */,
+				B6A54DC71E7D7649001BD8AC /* Startup */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B6A54DC51E7D7626001BD8AC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DCC1E7D7B3E001BD8AC /* APIClient.swift */,
+				B6A54DCE1E7D7CB7001BD8AC /* Router.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B6A54DC61E7D7630001BD8AC /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DA21E7CED7A001BD8AC /* AppDelegate.swift */,
+				B6A54DA91E7CED7A001BD8AC /* Assets.xcassets */,
+				B6A54DAE1E7CED7A001BD8AC /* Info.plist */,
+				B6D834101E8047CE001DEBC3 /* Localizable.strings */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		B6A54DC71E7D7649001BD8AC /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DAB1E7CED7A001BD8AC /* LaunchScreen.storyboard */,
+			);
+			path = Startup;
+			sourceTree = "<group>";
+		};
+		B6A54DC81E7D7671001BD8AC /* GAreaLargeSearch */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DCA1E7D76AA001BD8AC /* API */,
+				B6A54DCB1E7D76AF001BD8AC /* Response */,
+			);
+			path = GAreaLargeSearch;
+			sourceTree = "<group>";
+		};
+		B6A54DC91E7D7689001BD8AC /* RestSearch */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DEF1E7EA373001BD8AC /* API */,
+				B6A54DEE1E7EA36C001BD8AC /* Response */,
+			);
+			path = RestSearch;
+			sourceTree = "<group>";
+		};
+		B6A54DCA1E7D76AA001BD8AC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DDE1E7D8606001BD8AC /* GAreaLargeSearchAPI.swift */,
+				B6A54DD81E7D82E7001BD8AC /* GAreaLargeSearchLoadable.swift */,
+				B6A54DD61E7D80FE001BD8AC /* GAreaLargeSearchParamsBuilder.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B6A54DCB1E7D76AF001BD8AC /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DDA1E7D834A001BD8AC /* GAreaLargeSearchResults.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		B6A54DD01E7D8013001BD8AC /* GNavi */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DD11E7D8021001BD8AC /* Common */,
+				B6A54DC81E7D7671001BD8AC /* GAreaLargeSearch */,
+				B6A54DC91E7D7689001BD8AC /* RestSearch */,
+			);
+			path = GNavi;
+			sourceTree = "<group>";
+		};
+		B6A54DD11E7D8021001BD8AC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DD21E7D803F001BD8AC /* GNaviBaseParamsBuilder.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B6A54DE01E7DB08F001BD8AC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B6A54DE11E7DB09A001BD8AC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B6A54DE21E7DB0A0001BD8AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B6A54DE31E7DB0A6001BD8AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DE41E7DB0CC001BD8AC /* GNavi */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B6A54DE41E7DB0CC001BD8AC /* GNavi */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DE51E7DB0D5001BD8AC /* Common */,
+				B6A54DE61E7DB0DD001BD8AC /* GAreaLargeSearch */,
+				B6A54DE71E7DB0E5001BD8AC /* RestSearch */,
+			);
+			path = GNavi;
+			sourceTree = "<group>";
+		};
+		B6A54DE51E7DB0D5001BD8AC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DE81E7DB101001BD8AC /* GNaviBaseParamsBuilderTests.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B6A54DE61E7DB0DD001BD8AC /* GAreaLargeSearch */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DEA1E7E2D28001BD8AC /* API */,
+				B6A54DEB1E7E2D2F001BD8AC /* Response */,
+			);
+			path = GAreaLargeSearch;
+			sourceTree = "<group>";
+		};
+		B6A54DE71E7DB0E5001BD8AC /* RestSearch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RestSearch;
+			sourceTree = "<group>";
+		};
+		B6A54DEA1E7E2D28001BD8AC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DEC1E7E2D68001BD8AC /* GAreaLargeSearchParamsBuilderTests.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B6A54DEB1E7E2D2F001BD8AC /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		B6A54DEE1E7EA36C001BD8AC /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B62068261E7FEE59008F197B /* RestSearchResults.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		B6A54DEF1E7EA373001BD8AC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B62068281E801351008F197B /* RestSearchAPI.swift */,
+				B62068241E7FDAFE008F197B /* RestSearchLoadable.swift */,
+				B62068221E7FD36F008F197B /* RestSearchParamsBuilder.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B6A54DF01E7F9706001BD8AC /* AreaSelect */ = {
+			isa = PBXGroup;
+			children = (
+				B6A54DF31E7F9755001BD8AC /* AreaSelectViewController.storyboard */,
+				B6A54DF11E7F9747001BD8AC /* AreaSelectViewController.swift */,
+			);
+			path = AreaSelect;
+			sourceTree = "<group>";
+		};
+		C5E1A9698B8903E721CC7F9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7830D7C61F1F4BD442834A8 /* Pods_gnavi_api_demo.framework */,
+				2A2167F4A6D0B6C61EB42715 /* Pods_gnavi_api_demoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B6A54D9E1E7CED79001BD8AC /* gnavi-api-demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6A54DBC1E7CED7A001BD8AC /* Build configuration list for PBXNativeTarget "gnavi-api-demo" */;
+			buildPhases = (
+				7870324100ED4B9207D5620B /* [CP] Check Pods Manifest.lock */,
+				B6A54D9B1E7CED79001BD8AC /* Sources */,
+				B6A54D9C1E7CED79001BD8AC /* Frameworks */,
+				B6A54D9D1E7CED79001BD8AC /* Resources */,
+				7DCE3CB1E86E79446E99A136 /* [CP] Embed Pods Frameworks */,
+				DB02CD4EC1F43DDAEBE40267 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gnavi-api-demo";
+			productName = "gnavi-api-demo";
+			productReference = B6A54D9F1E7CED7A001BD8AC /* gnavi-api-demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B6A54DB21E7CED7A001BD8AC /* gnavi-api-demoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6A54DBF1E7CED7A001BD8AC /* Build configuration list for PBXNativeTarget "gnavi-api-demoTests" */;
+			buildPhases = (
+				D621AAF4FB7390B40FC15AF5 /* [CP] Check Pods Manifest.lock */,
+				B6A54DAF1E7CED7A001BD8AC /* Sources */,
+				B6A54DB01E7CED7A001BD8AC /* Frameworks */,
+				B6A54DB11E7CED7A001BD8AC /* Resources */,
+				F9C4223790EE4DE3B10E7257 /* [CP] Embed Pods Frameworks */,
+				7BA7DB620B48884A6BE96B1D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6A54DB51E7CED7A001BD8AC /* PBXTargetDependency */,
+			);
+			name = "gnavi-api-demoTests";
+			productName = "gnavi-api-demoTests";
+			productReference = B6A54DB31E7CED7A001BD8AC /* gnavi-api-demoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B6A54D971E7CED79001BD8AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = YukiOkudera;
+				TargetAttributes = {
+					B6A54D9E1E7CED79001BD8AC = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = PCCZJUYRT6;
+						ProvisioningStyle = Automatic;
+					};
+					B6A54DB21E7CED7A001BD8AC = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = PCCZJUYRT6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B6A54D9E1E7CED79001BD8AC;
+					};
+				};
+			};
+			buildConfigurationList = B6A54D9A1E7CED79001BD8AC /* Build configuration list for PBXProject "gnavi-api-demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B6A54D961E7CED79001BD8AC;
+			productRefGroup = B6A54DA01E7CED7A001BD8AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B6A54D9E1E7CED79001BD8AC /* gnavi-api-demo */,
+				B6A54DB21E7CED7A001BD8AC /* gnavi-api-demoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B6A54D9D1E7CED79001BD8AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6D834111E8047CE001DEBC3 /* Localizable.strings in Resources */,
+				B6808F5E1E7FB37400E0B5A9 /* RestaulantListViewController.storyboard in Resources */,
+				B6A54DAD1E7CED7A001BD8AC /* LaunchScreen.storyboard in Resources */,
+				B6A54DAA1E7CED7A001BD8AC /* Assets.xcassets in Resources */,
+				B6A54DF41E7F9755001BD8AC /* AreaSelectViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6A54DB11E7CED7A001BD8AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7870324100ED4B9207D5620B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7BA7DB620B48884A6BE96B1D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gnavi-api-demoTests/Pods-gnavi-api-demoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DCE3CB1E86E79446E99A136 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gnavi-api-demo/Pods-gnavi-api-demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D621AAF4FB7390B40FC15AF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB02CD4EC1F43DDAEBE40267 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gnavi-api-demo/Pods-gnavi-api-demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9C4223790EE4DE3B10E7257 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gnavi-api-demoTests/Pods-gnavi-api-demoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B6A54D9B1E7CED79001BD8AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6808F591E7F9DB100E0B5A9 /* AreaSelectTableViewCell.swift in Sources */,
+				B6A54DCF1E7D7CB7001BD8AC /* Router.swift in Sources */,
+				B6A54DD91E7D82E7001BD8AC /* GAreaLargeSearchLoadable.swift in Sources */,
+				B6808F5C1E7FB35A00E0B5A9 /* RestaulantListViewController.swift in Sources */,
+				B6A54DDF1E7D8606001BD8AC /* GAreaLargeSearchAPI.swift in Sources */,
+				B6A54DF21E7F9747001BD8AC /* AreaSelectViewController.swift in Sources */,
+				B6808F571E7F9C0200E0B5A9 /* AreaSelectTableView.swift in Sources */,
+				B6A54DA31E7CED7A001BD8AC /* AppDelegate.swift in Sources */,
+				B62068271E7FEE59008F197B /* RestSearchResults.swift in Sources */,
+				B6A54DD31E7D803F001BD8AC /* GNaviBaseParamsBuilder.swift in Sources */,
+				B62068251E7FDAFE008F197B /* RestSearchLoadable.swift in Sources */,
+				B620682C1E8027FD008F197B /* RestaulantListTableView.swift in Sources */,
+				B62068231E7FD36F008F197B /* RestSearchParamsBuilder.swift in Sources */,
+				B62068291E801351008F197B /* RestSearchAPI.swift in Sources */,
+				B6A54DD71E7D80FE001BD8AC /* GAreaLargeSearchParamsBuilder.swift in Sources */,
+				B6A54DCD1E7D7B3E001BD8AC /* APIClient.swift in Sources */,
+				B620682E1E802954008F197B /* RestaulantListTableViewCell.swift in Sources */,
+				B6A54DDB1E7D834A001BD8AC /* GAreaLargeSearchResults.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6A54DAF1E7CED7A001BD8AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6A54DE91E7DB101001BD8AC /* GNaviBaseParamsBuilderTests.swift in Sources */,
+				B6A54DED1E7E2D68001BD8AC /* GAreaLargeSearchParamsBuilderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B6A54DB51E7CED7A001BD8AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6A54D9E1E7CED79001BD8AC /* gnavi-api-demo */;
+			targetProxy = B6A54DB41E7CED7A001BD8AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B6A54DAB1E7CED7A001BD8AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6A54DAC1E7CED7A001BD8AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B6A54DBA1E7CED7A001BD8AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B6A54DBB1E7CED7A001BD8AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B6A54DBD1E7CED7A001BD8AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AD178EC25BD16BA695464C5 /* Pods-gnavi-api-demo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
+				INFOPLIST_FILE = "gnavi-api-demo/Others/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.gnavi-api-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B6A54DBE1E7CED7A001BD8AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E1FC6C1AFF5F0D35F224165 /* Pods-gnavi-api-demo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
+				INFOPLIST_FILE = "gnavi-api-demo/Others/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.gnavi-api-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B6A54DC01E7CED7A001BD8AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ABF887CF58E406AB6DF72C3 /* Pods-gnavi-api-demoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
+				INFOPLIST_FILE = "gnavi-api-demoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.gnavi-api-demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gnavi-api-demo.app/gnavi-api-demo";
+			};
+			name = Debug;
+		};
+		B6A54DC11E7CED7A001BD8AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACB109157B01FDABEFEB361D /* Pods-gnavi-api-demoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
+				INFOPLIST_FILE = "gnavi-api-demoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.gnavi-api-demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gnavi-api-demo.app/gnavi-api-demo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B6A54D9A1E7CED79001BD8AC /* Build configuration list for PBXProject "gnavi-api-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6A54DBA1E7CED7A001BD8AC /* Debug */,
+				B6A54DBB1E7CED7A001BD8AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6A54DBC1E7CED7A001BD8AC /* Build configuration list for PBXNativeTarget "gnavi-api-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6A54DBD1E7CED7A001BD8AC /* Debug */,
+				B6A54DBE1E7CED7A001BD8AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6A54DBF1E7CED7A001BD8AC /* Build configuration list for PBXNativeTarget "gnavi-api-demoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6A54DC01E7CED7A001BD8AC /* Debug */,
+				B6A54DC11E7CED7A001BD8AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B6A54D971E7CED79001BD8AC /* Project object */;
+}

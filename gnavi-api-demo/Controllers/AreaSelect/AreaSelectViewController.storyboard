@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bi1-rD-Owr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Area Select View Controller-->
+        <scene sceneID="P5i-CU-W2M">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Bi1-rD-Owr" customClass="AreaSelectViewController" customModule="gnavi_api_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v5d-kZ-cQK"/>
+                        <viewControllerLayoutGuide type="bottom" id="N0H-vr-xQS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X0C-Et-vVL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RIh-IF-rUh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AreaSelectTableViewCell" id="19M-B8-Lml" customClass="AreaSelectTableViewCell" customModule="gnavi_api_demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="19M-B8-Lml" id="Fcm-dw-cLg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0il-Bp-vHU">
+                                                    <rect key="frame" x="8" y="11" width="359" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0il-Bp-vHU" firstAttribute="leading" secondItem="Fcm-dw-cLg" secondAttribute="leadingMargin" id="BPp-Zn-IGN"/>
+                                                <constraint firstItem="0il-Bp-vHU" firstAttribute="trailing" secondItem="Fcm-dw-cLg" secondAttribute="trailingMargin" id="HLE-m7-qf6"/>
+                                                <constraint firstItem="0il-Bp-vHU" firstAttribute="centerY" secondItem="Fcm-dw-cLg" secondAttribute="centerY" id="yuU-Cg-UFE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="areaNameLabel" destination="0il-Bp-vHU" id="qEy-gS-kPV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N0H-vr-xQS" firstAttribute="top" secondItem="RIh-IF-rUh" secondAttribute="bottom" id="7Va-7c-LPB"/>
+                            <constraint firstAttribute="trailing" secondItem="RIh-IF-rUh" secondAttribute="trailing" id="Czs-o4-scI"/>
+                            <constraint firstItem="RIh-IF-rUh" firstAttribute="leading" secondItem="X0C-Et-vVL" secondAttribute="leading" id="LF2-tD-aAm"/>
+                            <constraint firstItem="RIh-IF-rUh" firstAttribute="top" secondItem="v5d-kZ-cQK" secondAttribute="bottom" id="MBJ-kc-Snk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="RIh-IF-rUh" id="6j2-ib-3c4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7i8-XW-b1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200.80000000000001" y="-76.011994002998506"/>
+        </scene>
+    </scenes>
+</document>
