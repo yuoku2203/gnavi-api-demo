@@ -31,7 +31,11 @@ class RestSearchAPI: NSObject {
             guard let weakSelf = self else { return }
             
             switch response {
-            case .Success(let result):
+            case .Success(let result, let statusCode):
+                
+                if let statusCode = statusCode {
+                    print(statusCode)
+                }
                 
                 guard let restSearchResults = RestSearchResults.mapping(json: result) else { return }
                 
@@ -39,7 +43,10 @@ class RestSearchAPI: NSObject {
                 weakSelf.loadable?.setStatus(status: status)
                 
                 break
-            case .Failure(let error):
+            case .Failure(let error, let statusCode):
+                if let statusCode = statusCode {
+                    print(statusCode)
+                }
                 
                 weakSelf.loadable?.setStatus(status: .error(error))
             }

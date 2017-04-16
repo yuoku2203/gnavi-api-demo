@@ -22,7 +22,11 @@ final class GAreaLargeSearchAPI {
             guard let weakSelf = self else { return }
             
             switch response {
-            case .Success(let result):
+            case .Success(let result, let statusCode):
+                
+                if let statusCode = statusCode {
+                    print(statusCode)
+                }
                 
                 guard let gAreaLargeSearchResults = GAreaLargeSearchResults.mapping(json: result) else { return }
                 
@@ -30,7 +34,11 @@ final class GAreaLargeSearchAPI {
                 weakSelf.loadable?.setStatus(status: status)
                 
                 break
-            case .Failure(let error):
+            case .Failure(let error, let statusCode):
+                
+                if let statusCode = statusCode {
+                    print(statusCode)
+                }
                 
                 weakSelf.loadable?.setStatus(status: .error(error))
             }
