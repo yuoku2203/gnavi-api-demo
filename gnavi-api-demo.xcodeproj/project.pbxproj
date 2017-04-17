@@ -33,6 +33,7 @@
 		B6A54DED1E7E2D68001BD8AC /* GAreaLargeSearchParamsBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A54DEC1E7E2D68001BD8AC /* GAreaLargeSearchParamsBuilderTests.swift */; };
 		B6A54DF21E7F9747001BD8AC /* AreaSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A54DF11E7F9747001BD8AC /* AreaSelectViewController.swift */; };
 		B6A54DF41E7F9755001BD8AC /* AreaSelectViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A54DF31E7F9755001BD8AC /* AreaSelectViewController.storyboard */; };
+		B6AD9EDE1EA5275500584EEA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD9EDD1EA5275500584EEA /* Logger.swift */; };
 		B6D834111E8047CE001DEBC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6D834101E8047CE001DEBC3 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		B6A54DEC1E7E2D68001BD8AC /* GAreaLargeSearchParamsBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GAreaLargeSearchParamsBuilderTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B6A54DF11E7F9747001BD8AC /* AreaSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaSelectViewController.swift; sourceTree = "<group>"; };
 		B6A54DF31E7F9755001BD8AC /* AreaSelectViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AreaSelectViewController.storyboard; sourceTree = "<group>"; };
+		B6AD9EDD1EA5275500584EEA /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B6D834101E8047CE001DEBC3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		D7830D7C61F1F4BD442834A8 /* Pods_gnavi_api_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gnavi_api_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -218,6 +220,7 @@
 			children = (
 				B6A54DCC1E7D7B3E001BD8AC /* APIClient.swift */,
 				B6A54DCE1E7D7CB7001BD8AC /* Router.swift */,
+				B6AD9EDD1EA5275500584EEA /* Logger.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6AD9EDE1EA5275500584EEA /* Logger.swift in Sources */,
 				B6808F591E7F9DB100E0B5A9 /* AreaSelectTableViewCell.swift in Sources */,
 				B6A54DCF1E7D7CB7001BD8AC /* Router.swift in Sources */,
 				B6A54DD91E7D82E7001BD8AC /* GAreaLargeSearchLoadable.swift in Sources */,

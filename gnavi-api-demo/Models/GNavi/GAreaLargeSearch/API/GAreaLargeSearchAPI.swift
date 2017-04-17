@@ -17,6 +17,11 @@ final class GAreaLargeSearchAPI {
         let params = GAreaLargeSearchParamsBuilder.create()
         let router = Router.GAreaLargeSearchAPI(params)
         
+        if APIClient.isOnline() == false {
+            Logger.error(message: "オフライン")
+            return
+        }
+        
         APIClient.request(router: router) { [weak self] (response) in
             
             guard let weakSelf = self else { return }

@@ -18,72 +18,90 @@ enum Result<VALUE> {
 
 final class APIClient: DataRequest {
     
-    static func request(router : Router,
+    
+    /// 端末の通信状態を取得
+    ///
+    /// - Returns: true: オンライン, false: オフライン
+    static func isOnline() -> Bool {
+        
+        if let reachabilityManager = NetworkReachabilityManager() {
+            reachabilityManager.startListening()
+            return reachabilityManager.isReachable
+        }
+        return false
+    }
+    
+    /// API Request
+    static func request(router: Router,
                         completionHandler: @escaping (Result<JSON>) -> () = {_ in}) {
         
-        Alamofire.request(router).responseString { (response) in
+        Alamofire.request(router).responseSwiftyJSON { (response) in
+            
             switch response.result {
+                
             case .success(let value):
-                let jsonObject = JSON.init(parseJSON: value)
                 let statusCode = response.response?.statusCode
-                
-                completionHandler(Result.Success((jsonObject, statusCode)))
-                
-                print("statusCode: \(statusCode)") // the status code
+                Logger.info(message: "HTTP status code: \(statusCode)")
+                completionHandler(Result.Success((value, statusCode)))
                 return
                 
             case .failure:
-                
+                var statusCode = response.response?.statusCode
                 if let error = response.result.error {
-                    let statusCode = response.response?.statusCode
+                    Logger.info(message: "HTTP status code: \(statusCode)")
                     completionHandler(Result.Failure((error, statusCode)))
-                } else {
-                    fatalError("error is nil.")
-                }
-            }
-            
-            var statusCode = response.response?.statusCode
-            if let error = response.result.error as? AFError {
-                statusCode = error._code // statusCode private
-                switch error {
-                case .invalidURL(let url):
-                    print("Invalid URL: \(url) - \(error.localizedDescription)")
-                case .parameterEncodingFailed(let reason):
-                    print("Parameter encoding failed: \(error.localizedDescription)")
-                    print("Failure Reason: \(reason)")
-                case .multipartEncodingFailed(let reason):
-                    print("Multipart encoding failed: \(error.localizedDescription)")
-                    print("Failure Reason: \(reason)")
-                case .responseValidationFailed(let reason):
-                    print("Response validation failed: \(error.localizedDescription)")
-                    print("Failure Reason: \(reason)")
-                    
-                    switch reason {
-                    case .dataFileNil, .dataFileReadFailed:
-                        print("Downloaded file could not be read")
-                    case .missingContentType(let acceptableContentTypes):
-                        print("Content Type Missing: \(acceptableContentTypes)")
-                    case .unacceptableContentType(let acceptableContentTypes, let responseContentType):
-                        print("Response content type: \(responseContentType) was unacceptable: \(acceptableContentTypes)")
-                    case .unacceptableStatusCode(let code):
-                        print("Response status code was unacceptable: \(code)")
-                        statusCode = code
-                    }
-                case .responseSerializationFailed(let reason):
-                    print("Response serialization failed: \(error.localizedDescription)")
-                    print("Failure Reason: \(reason)")
+                    return
                 }
                 
-                print("Underlying error: \(error.underlyingError)")
-            } else if let error = response.result.error as? URLError {
-                print("URLError occurred: \(error)")
-            } else {
-                print("Unknown error: \(response.result.error)")
+                if let error = response.result.error as? AFError {
+                    statusCode = error._code
+                    switch error {
+                        
+                    case .invalidURL(let url):
+                        Logger.error(message: "Invalid URL: \(url) - \(error.localizedDescription)")
+                        
+                    case .parameterEncodingFailed(let reason):
+                        Logger.error(message: "Parameter encoding failed: \(error.localizedDescription)")
+                        Logger.error(message: "Failure Reason: \(reason)")
+                        
+                    case .multipartEncodingFailed(let reason):
+                        Logger.error(message: "Multipart encoding failed: \(error.localizedDescription)")
+                        Logger.error(message: "Failure Reason: \(reason)")
+                        
+                    case .responseValidationFailed(let reason):
+                        Logger.error(message: "Response validation failed: \(error.localizedDescription)")
+                        Logger.error(message: "Failure Reason: \(reason)")
+                        
+                        switch reason {
+                            
+                        case .dataFileNil, .dataFileReadFailed:
+                            Logger.error(message: "Downloaded file could not be read")
+                            
+                        case .missingContentType(let acceptableContentTypes):
+                            Logger.error(message: "Content Type Missing: \(acceptableContentTypes)")
+                            
+                        case .unacceptableContentType(let acceptableContentTypes, let responseContentType):
+                            Logger.error(message: "Response content type: \(responseContentType) was unacceptable: \(acceptableContentTypes)")
+                            
+                        case .unacceptableStatusCode(let code):
+                            Logger.error(message: "Response status code was unacceptable: \(code)")
+                            statusCode = code
+                        }
+                        
+                    case .responseSerializationFailed(let reason):
+                        Logger.error(message: "Response serialization failed: \(error.localizedDescription)")
+                        Logger.error(message: "Failure Reason: \(reason)")
+                    }
+                    
+                    Logger.error(message: "Underlying error: \(error.underlyingError)")
+                } else if let error = response.result.error as? URLError {
+                    Logger.error(message: "URL error: \(error)")
+                } else {
+                    Logger.error(message: "Unknown error: \(response.result.error)")
+                }
+                
+                Logger.info(message: "HTTP status code: \(statusCode)")
             }
-            
-            let statusCodeString = statusCode?.description ?? "-"
-            print("statusCode: \(statusCodeString)") // the status code
-            
         }
     }
 }

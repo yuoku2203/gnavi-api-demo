@@ -26,6 +26,11 @@ class RestSearchAPI: NSObject {
                                                     offset_page: requestCount)
         let router = Router.RestSearchAPI(params)
         
+        if APIClient.isOnline() == false {
+            Logger.error(message: "オフライン")
+            return
+        }
+        
         APIClient.request(router: router) { [weak self] (response) in
             
             guard let weakSelf = self else { return }
